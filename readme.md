@@ -1,4 +1,4 @@
-#ENDOLITRO 1.0
+# ENDOLITRO 1.0
 
 ## About Endolitro
 
@@ -7,14 +7,14 @@ Endolitro is an adaptable web application to keep track of competitions between 
 - CRUD your own participants.
 - CRUD your own competitions.
 - Assign participants to competitions and play!.
-- Print your results contest in PDF. 
+- Print your results contest in PDF.
 
 ## How points work
 
--**Bottle**: ***1 point***
--**Jar**: ***2 points***
--**Cocktail**: ***3 points***
--**Shot**: ***2 points***
+- **Bottle**: ***1 point***
+- **Jar**: ***2 points***
+- **Cocktail**: ***3 points***
+- **Shot**: ***2 points***
 
 ## License
 

@@ -67,15 +67,16 @@
 </div>
 
 <!-- TABLA DE PARTICIPANTES -->
+<h4 class="text-center">Borrachuzos inscritos en el concurso</h4>
+
 @if( count($concurso->participantes) > 0 )
   <table class="striped stack">
     <thead>
-      <th colspan="3" class="text-center">Borrachuzos inscritos en el concurso</th>
-    </thead>
-    <thead>
-      <th>Nombre</th>
-      <th>Añadir puntos</th>
-      <th>Puntuación total</th>
+      <tr>
+        <td>Nombre</td>
+        <td>Añadir puntos</td>
+        <td>Puntuación total</td>
+      </tr>
     </thead>
     <tbody>
       @foreach($concurso->participantes as $p)
@@ -83,17 +84,17 @@
           <td>{{ $p->nombre }} {{ $p->apellidos }}</td>
           <td>
             <div class="button-group">
-              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>1]) !!}" class="button">
-                <img src="{{ url('/') }}/img/bottle.png" alt="tercio" title="Tercio +1">
+              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>1]) !!}" class="button" title="Tercio +1">
+                <img src="{{ url('/') }}/img/bottle.png" alt="tercio"> + 1
               </a>
-              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>2]) !!}" class="button">
-                <img src="{{ url('/') }}/img/beer-jar.png" alt="jarra" title="Jarra +2">
+              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>2]) !!}" class="button" title="Jarra +2">
+                <img src="{{ url('/') }}/img/beer-jar.png" alt="jarra"> + 2
               </a>
-              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>3]) !!}" class="button">
-                <img src="{{ url('/') }}/img/cocktail.png" alt="copa" title="Copa +3">
+              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>3]) !!}" class="button" title="Copa +3">
+                <img src="{{ url('/') }}/img/cocktail.png" alt="copa"> + 3
               </a>
-              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>2]) !!}" class="button">
-                <img src="{{ url('/') }}/img/tequila-shot.png" alt="chupito" title="Chupito +2">
+              <a href="{!! action('ConcursoController@addPoints', ['concurso_id'=>$concurso->id, 'participante_id'=>$p->id, 'puntuacion'=>2]) !!}" class="button" title="Chupito +2">
+                <img src="{{ url('/') }}/img/tequila-shot.png" alt="chupito"> + 2
               </a>
             </div>
           </td>

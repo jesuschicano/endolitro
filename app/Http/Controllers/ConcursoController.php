@@ -105,7 +105,7 @@ class ConcursoController extends Controller
       // actualizamos la puntuación (pivot)
       $concurso->participantes()->updateExistingPivot($participante_id, ['puntuacion'=>$puntos+$old]);
 
-      return redirect('concursos/'.$concurso_id.'/edit');
+      return redirect('concursos/'.$concurso_id.'/edit')->with('status', 'Se ha aumentado la puntuación.');
     }
 
     public function cerrar($id)
